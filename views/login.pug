@@ -1,8 +1,8 @@
 extends layout
 
 block content
-  .l-box-lrg.is-center
-    h1.content-head-ribbon.content-head Login
+  .content
+    h1 Login
     if error
       p.error= error
     form.pure-form.pure-form-stacked(action="/login", method="post")

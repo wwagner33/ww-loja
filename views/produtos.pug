@@ -1,10 +1,13 @@
 extends layout
 
 block content
-  .l-box-lrg.is-center
-    h1.content-head-ribbon.content-head Lista de Produtos de Informática
-    each produto in produtos
-      .produto
-        h2= produto.nome
-        p Descrição: #{produto.descricao}
-        p Preço: R$ #{produto.preco}
+  .content
+    h1 Produtos Disponíveis
+    if produtos.length
+      each produto in produtos
+        .produto
+          h3= produto.nome
+          p Descrição: #{produto.descricao}
+          p Preço: R$ #{produto.preco}
+    else
+      p Nenhum produto disponível no momento.
