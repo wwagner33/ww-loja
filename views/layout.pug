@@ -1,10 +1,14 @@
-doctype html
-html(lang="pt-br")
-  head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title #{title}
-    link(rel="stylesheet", href="/pure-min.css")
-  body
-    .container
-      block content
+extends layout
+
+block content
+  .l-box-lrg.is-center
+    h1.content-head-ribbon.content-head Login
+    if error
+      p.error= error
+    form.pure-form.pure-form-stacked(action="/login", method="post")
+      fieldset
+        label(for="email") Email:
+        input(type="email", id="email", name="email", required)
+        label(for="senha") Senha:
+        input(type="password", id="senha", name="senha", required)
+        button.pure-button.pure-button-primary(type="submit") Entrar

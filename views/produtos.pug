@@ -1,9 +1,10 @@
 extends layout
 
 block content
-  h1 Lista de Produtos de Informática
-  each produto in produtos
-    .produto
-      h2= produto.nome
-      p Descrição: #{produto.descricao}
-      p Preço: R$ #{produto.preco}
+  .l-box-lrg.is-center
+    h1.content-head-ribbon.content-head Lista de Produtos de Informática
+    each produto in produtos
+      .produto
+        h2= produto.nome
+        p Descrição: #{produto.descricao}
+        p Preço: R$ #{produto.preco}

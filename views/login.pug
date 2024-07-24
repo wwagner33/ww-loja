@@ -1,13 +1,14 @@
 extends layout
 
 block content
-  h1 Login
-  if error
-    p.error= error
-  form.pure-form.pure-form-stacked(action="/login", method="post")
-    fieldset
-      label(for="email") Email:
-      input(type="email", id="email", name="email", required)
-      label(for="senha") Senha:
-      input(type="password", id="senha", name="senha", required)
-      button.pure-button.pure-button-primary(type="submit") Entrar
+  .l-box-lrg.is-center
+    h1.content-head-ribbon.content-head Login
+    if error
+      p.error= error
+    form.pure-form.pure-form-stacked(action="/login", method="post")
+      fieldset
+        label(for="email") Email:
+        input(type="email", id="email", name="email", required)
+        label(for="senha") Senha:
+        input(type="password", id="senha", name="senha", required)
+        button.pure-button.pure-button-primary(type="submit") Entrar
